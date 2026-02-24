@@ -146,9 +146,10 @@ int main()
         std::cin >> choice;
         std::cin.ignore(1000, '\n');
 
-        if (choice == 'y' || choice == 'Y')
+        if (choice == 'y' || choice == 'Y') {
             ShellExecuteA(NULL, "open", "https://haveibeenpwned.com/Passwords", NULL, NULL, SW_SHOWNORMAL);
-        ShellExecuteA(NULL, "open", "https://haveibeenpwned.com/", NULL, NULL, SW_SHOWNORMAL);
+            ShellExecuteA(NULL, "open", "https://haveibeenpwned.com/", NULL, NULL, SW_SHOWNORMAL);
+        }
 
         std::cout << "\nCheck another password? (y/n): ";
         std::cin >> choice;
@@ -160,4 +161,5 @@ int main()
 
     FreeConsole();
     return 0;
+
 }
